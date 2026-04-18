@@ -1,7 +1,9 @@
 import json
+import os
 
 data_directory = './/yelpdata_CS3431//'
 output_directory = './/output//'
+os.makedirs(output_directory)
 
 def cleanStr4SQL(s):
     return s.replace("'","`").replace("\n"," ")
