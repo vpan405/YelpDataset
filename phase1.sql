@@ -13,7 +13,6 @@ DROP TABLE BusinessAttribute;
 DROP TABLE BusinessCategory;
 DROP TABLE Business CASCADE;
 
-
 CREATE TABLE Business (
     b_id CHAR (22),
     rating REAL,
@@ -65,6 +64,7 @@ CREATE TABLE CheckIn (
 
 CREATE TABLE Users (
     user_id CHAR (22),
+    name VARCHAR,
     avg_stars FLOAT,
     create_date DATE,
     funny_score REAL,

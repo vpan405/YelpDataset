@@ -187,9 +187,11 @@ def insert_users():
 
                 ## USERS INSERT
                 try:
-                    cursor.execute("""INSERT INTO Users (user_id, avg_stars, create_date, funny_score, useful_score, cool_score, num_fans, tips)
-                                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s); """,
-                                    (data['user_id'], data['average_stars'], data["yelping_since"], data["funny"], data["useful"], data["cool"], data["fans"], 0))
+                    cursor.execute(
+                        """INSERT INTO Users (user_id, name, avg_stars, create_date, funny_score, useful_score,
+                                              cool_score, num_fans, tips)
+                                      VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s); """,
+                                   (data['user_id'], data['name'], data['average_stars'], data["yelping_since"], data["funny"], data["useful"], data["cool"], data["fans"], 0))
 
                 except Exception as e:
                     print("Insert to users table failed for row " + str(count_line) + "!",e)
